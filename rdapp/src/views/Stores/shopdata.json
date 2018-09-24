@@ -1,0 +1,12 @@
+[
+    {
+        "prodName": "Product-A",
+        "price": "3",
+        "description": "Product Description in few 15 to 20 words"
+    },
+    {
+        "prodName": "Product-AA",
+        "price": "6",
+        "description": "Product Description in few 15 to 20 words"
+    }
+]

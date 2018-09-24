@@ -1,0 +1,38 @@
+[
+    {
+      "uniqueNo": "STORE-A",
+      "deletable": true,
+      "items": [
+        {
+          "prodName": "Product-A",
+          "price": 3,
+          "quantity": 20,
+          "description": "Product Description in few 15 to 20 words"
+        },
+        {
+          "prodName": "Product-AA",
+          "price": 6,
+          "quantity": 10,
+          "description": "Product Description in few 15 to 20 words"
+        }
+      ]
+    },
+    {
+      "uniqueNo": "STORE-B",
+      "deletable": true,
+      "items": [
+        {
+          "prodName": "Product-B",
+          "price": 3,
+          "quantity": 15,
+          "description": "Product Description in few 15 to 20 words"
+        },
+        {
+          "prodName": "Product-BB",
+          "price": 6,
+          "quantity": 10,
+          "description": "Product Description in few 15 to 20 words"
+        }
+      ]
+    }
+  ]

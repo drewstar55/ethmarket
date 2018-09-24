@@ -1,0 +1,42 @@
+[
+    {
+      "uniqueNo": "MY-STORE-A",
+      "deletable": true,
+      "items": [
+        {
+          "prodName": "My-Product-A",
+          "price": 3,
+          "quantity": 20,
+          "description": "Product Description in few 15 to 20 words"
+        },
+        {
+          "prodName": "My-Product-AA",
+          "price": 6,
+          "quantity": 10,
+          "description": "Product Description in few 15 to 20 words"
+        }
+      ],
+      "storeId": "12134234234",
+      "balance": 50
+    },
+    {
+      "uniqueNo": "MY-STORE-B",
+      "deletable": true,
+      "items": [
+        {
+          "prodName": "My-Product-B",
+          "price": 3,
+          "quantity": 20,
+          "description": "Product Description in few 15 to 20 words"
+        },
+        {
+          "prodName": "My-Product-BB",
+          "price": 6,
+          "quantity": 10,
+          "description": "Product Description in few 15 to 20 words"
+        }
+      ],
+      "storeId": "872364237434",
+      "balance": 100
+    }
+  ]
