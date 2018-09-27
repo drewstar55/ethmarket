@@ -16,3 +16,7 @@
 > > *npm rebuild node-sass*
 > 3. Now start app using below command
 > > *npm start* 
+
+If everything goes well, you should be able to see below image at http://localhost:3000
+
+![enter image description here](https://github.com/walkingtree/ethmarket/blob/master/rdapp/rdapp_login.png)
