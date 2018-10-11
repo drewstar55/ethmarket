@@ -1,0 +1,17 @@
+<div>
+  <h1 mat-dialog-title class="dialouge-title">{{title}}
+  <img src="../../assets/Remove.svg" class="icon-property close-icon" (click)="close()"/>
+</h1>
+
+  <form  [formGroup]="userFormGroup" (ngSubmit)="createUser(userFormGroup.value)">
+    
+     <!-- <mat-form-field class="mat-field-property" >
+          <input matInput placeholder="Name of the Admin"  formControlName="userName" class="mat-input-font"/>
+        </mat-form-field>-->
+        <mat-form-field class="mat-field-property" >
+            <input matInput placeholder="Account ID"  formControlName="accountNumber" class="mat-input-font"/>
+          </mat-form-field>
+         <div><button mat-raised-button class="mat-field-button"  [disabled]="!userFormGroup.valid">{{buttonText}}</button></div>
+  </form>
+
+</div>

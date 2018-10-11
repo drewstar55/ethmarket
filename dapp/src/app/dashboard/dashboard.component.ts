@@ -1,37 +1,27 @@
 import { Component, OnInit } from '@angular/core';
-import {EthcontractService} from './../shared/ethContract.service'
-import { Router, ActivatedRoute, Params } from '@angular/router';
+import {Router} from '@angular/router';
+import { DataService } from '../providers/data-service/data-service';
+
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-accessType: any;
-isSuperAdmin: boolean;
-isAdmin: boolean;
-isStoreOwner: boolean;
 
-  constructor(private route: ActivatedRoute, private router: Router, private ethcontractService: EthcontractService) { }
+  accessType:any;
+  constructor( private router: Router, private dataService: DataService) {
+
+   }
 
   ngOnInit() {
-      console.log('In dashboard');
-    this.ethcontractService.checkAccess().then(accessType=>{
-      this.accessType= accessType;
-      console.log(this.accessType);
-      if(this.accessType !==undefined){
-      this.isSuperAdmin=this.accessType[0];
-      this.isAdmin=this.accessType[1];
-      this.isStoreOwner=this.accessType[2];
-        console.log(this.isSuperAdmin);
-      }
-    });
-
+    console.log('In dashboard');
+    this.router.navigateByUrl(`/dashboard/store`);
   }
+  changeTab(tab){
+      this.router.navigateByUrl(`/dashboard/${tab}`);
+  
 
-  logout(){
-    this.router.navigate(['/login']);
-  }
-
+}
 }

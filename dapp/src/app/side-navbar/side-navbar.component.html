@@ -1,0 +1,42 @@
+<div>
+<div class="tool-bar-height"><span class="tool-bar-title">ONLINE MARKET PLACE</span></div>
+<div style="height:calc(100% - 80px) ">
+    <mat-toolbar class="sideToolbarCls">
+    <mat-toolbar-row  class="mat-tool-bar-padding" id="store" (click)="onTabSelect('store',0)">
+        <div class="highlight-tab" *ngIf='highlightTab[0]'></div>
+          <img src="../../assets/icon_market.svg" class="icon-property iconCls" />
+          <span class="descriptionCls">MARKET</span>
+    </mat-toolbar-row>
+    <mat-toolbar-row id="admin"  class="mat-tool-bar-padding"   (click)="onTabSelect('admin',1)" *ngIf="isSuperAdmin">
+            <div class="highlight-tab" *ngIf="highlightTab[1]"></div>
+        <img src="../../assets/icon_customers.svg" class="icon-property iconCls"/>
+        <span class="descriptionCls"> ADMIN </span>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row id="mystores"   class="mat-tool-bar-padding" (click)="onTabSelect('mystores',2)" *ngIf="isStoreOwner">
+        <div class="highlight-tab" *ngIf="highlightTab[2]"></div>
+    <img src="../../assets/icon_store.svg" class="icon-property iconCls" />
+      <span class="descriptionCls">MY STORES</span>
+</mat-toolbar-row>
+
+ <mat-toolbar-row id="storeowners"  class="mat-tool-bar-padding"  (click)="onTabSelect('storeowners',3)" *ngIf="(isAdmin) && (!isSuperAdmin) ">
+        <div class="highlight-tab" *ngIf="highlightTab[3]"></div>
+    <img src="../../assets/icon_customers.svg" class="icon-property iconCls"/>
+      <span class="descriptionCls"> STORE OWNERS </span>
+</mat-toolbar-row>
+
+  <mat-toolbar-row  (click)="onTabSelect(tab,4)"  class="mat-tool-bar-padding"  class="settings">
+        <div class="highlight-tab" *ngIf="highlightTab[4]"></div>
+    <img src=" ../../assets/icon_help-center.svg" class="icon-property iconCls"/>
+      <span class="descriptionCls">HELP CENTER  </span>
+</mat-toolbar-row>
+
+<mat-toolbar-row  (click)="onTabSelect(tab,5)"  class="mat-tool-bar-padding"  class="help-center">
+        <div class="highlight-tab" *ngIf="highlightTab[5]"></div>
+    <img src="../../assets/icon_setting.svg" class="icon-property iconCls"/>
+    <span class="descriptionCls"> SETTINGS </span>
+</mat-toolbar-row>
+
+</mat-toolbar>
+</div>
+</div>

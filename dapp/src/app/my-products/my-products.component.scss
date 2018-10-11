@@ -1,0 +1,46 @@
+@import '../../variables.sccs';
+.action-icon{
+    float:right; 
+    margin:10px;
+    cursor:pointer;
+}
+
+.my-product-price{
+    color:#3B3B3B;
+    font-size:24px;
+    opacity:1; 
+    font-family: $base-font-family;
+    float:right;
+}
+
+.my-products-margin{
+    margin-top:10px;
+}
+
+.my-products-quantity{
+    color:#3B86FF; 
+    font-size:24px;
+    font-family: $base-font-family;
+    float:right;
+}
+
+.my-prodcucts-div{
+    background-color: #43425D !important;
+}
+
+
+
+.producuts-add-product{
+    margin-right:50px !important;
+    margin-top: 0px !important;
+}
+
+.product-description-width{
+max-width:70%;
+}
+
+.myproduct-store-title{
+    max-width:200px;
+    display: inline-block;
+}
+

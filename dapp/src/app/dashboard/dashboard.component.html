@@ -1,32 +1,19 @@
-<div class="container">
-<div  fxLayout="row">
-<mat-toolbar color="primary">
-  <span>Online Market Place</span>
-  <!-- This fills the remaining space of the current row -->
-  <span class="example-fill-remaining-space"></span>
-  <span><mat-icon (click)="logout()">logout</mat-icon></span>
-</mat-toolbar>
+
+<div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start stretch" fxFlexFill >
+    <div fxFlex="18"  class="sidenavCls">
+        <div class="sideBar">
+            <app-side-navbar  (changeTab)="changeTab($event)" ></app-side-navbar>
+        </div>
+      </div>
+      <div fxFlex="82">
+        <app-header-bar ></app-header-bar>
+        <div class="content-area">
+          <router-outlet></router-outlet></div>
+      </div>
 </div>
-<mat-sidenav-container >
-  <mat-sidenav mode="side" opened class="sidebar">
-    <button mat-button [matMenuTriggerFor]="menu">Dashboard</button>
-    <mat-menu #menu="matMenu">
-      <div *ngIf="isSuperAdmin">
-      <button mat-menu-item  [routerLink]="['/dashboard/admin']"> Admins</button>
-      </div>
-      <div *ngIf="isSuperAdmin || isAdmin">
-        <button mat-menu-item  [routerLink]="['/dashboard/storeowner']">Store Owners</button>
-      </div>
-      <div *ngIf="isStoreOwner">
-        <button mat-menu-item  [routerLink]="['/dashboard/stores']">My Stores</button>
-      </div>
-    <button mat-menu-item  [routerLink]="['/dashboard/allstores']">All Stores</button>
-    <!-- <button mat-menu-item  [routerLink]="['/dashboard/products']">Browse Products</button> -->
-  </mat-menu>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <router-outlet></router-outlet>
-<!-- <app-meta-sender></app-meta-sender> -->
-  </mat-sidenav-content>
-</mat-sidenav-container>
-</div>
+
+
+    
+
+
+

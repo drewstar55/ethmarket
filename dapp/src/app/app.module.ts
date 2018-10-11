@@ -1,87 +1,73 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { AppComponent } from './app.component';
-import { CommonModule } from '@angular/common';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+// tslint:disable-next-line:max-line-length
+import {MatInputModule, MatToolbarModule, MatSidenavModule, MatListModule, MatIconModule, MatCardModule, MatMenuModule, MatButtonModule, MatGridListModule,  MatDialogModule, MatTooltipModule, MatBadgeModule} from '@angular/material';
+import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {
-  MatButtonModule,
-  MatCardModule,
-  MatFormFieldModule,
-  MatInputModule,
-  MatSidenavModule,
-  MatToolbarModule,
-  MatMenuModule,
-  MatSelectModule,
-  MatCheckboxModule,
-  MatDialogModule,
-  MatIconModule
-} from '@angular/material';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 
-import { HttpClientModule } from '@angular/common/http';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { AppRoutingModule } from './app.routing';
-import { ProductComponent } from './dashboard/product/product.component';
-import { StoreComponent } from './dashboard/store/store.component';
-import { StoreownerComponent } from './dashboard/storeowner/storeowner.component';
-import { StoredetailsComponent } from './dashboard/store/storedetails/storedetails.component';
-import { ProductdetailsComponent } from './dashboard/product/productdetails/productdetails.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { FlexLayoutModule } from '@angular/flex-layout';
-
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { SideNavbarComponent } from './side-navbar/side-navbar.component';
+import { StoreComponent } from './store/store.component';
+import { UserComponent } from './user/user.component';
+import { HeaderBarComponent } from './header-bar/header-bar.component';
+import { AdminComponent } from './admin/admin.component';
+import { UserViewComponent } from './user-view/user-view.component';
+import { StoreOwnersComponent } from './store-owners/store-owners.component';
+import { StarRatingComponent } from './star-rating/star-rating/star-rating.component';
+import { AddStoreComponent } from './add-store/add-store.component';
+import { ProductsComponent } from './products/products.component';
+import "angular2-navigate-with-data";
+import { MyProductsComponent } from './my-products/my-products.component';
+import { AddPrdouctComponent } from './add-prdouct/add-prdouct.component';
 import { EthcontractService } from './shared/ethContract.service';
-import { StoreownerdetailsComponent } from './dashboard/storeowner/storeownerdetails/storeownerdetails.component';
-import { AdminComponent } from './dashboard/admin/admin.component';
-import { AddproductComponent } from './dashboard/product/addproduct/addproduct.component';
-import { AddstoreComponent } from './dashboard/store/addstore/addstore.component';
-import { AddstoreownerComponent } from './dashboard/storeowner/addstoreowner/addstoreowner.component';
-import { AddadminComponent } from './dashboard/admin/addadmin/addadmin.component';
-import { AllstoresComponent } from './dashboard/allstores/allstores.component';
-import { BuyproductComponent } from './dashboard/product/buyproduct/buyproduct.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    ProductComponent,
+    SideNavbarComponent,
     StoreComponent,
-    StoreownerComponent,
-    StoredetailsComponent,
-    ProductdetailsComponent,
-    StoreownerdetailsComponent,
+    UserComponent,
+    HeaderBarComponent,
     AdminComponent,
-    AddproductComponent,
-    AddstoreComponent,
-    AddstoreownerComponent,
-    AddadminComponent,
-    AllstoresComponent,
-    BuyproductComponent
+    UserViewComponent,
+    StoreOwnersComponent,
+    StarRatingComponent,
+    AddStoreComponent,
+    ProductsComponent,
+    MyProductsComponent,
+    AddPrdouctComponent
+   
+
   ],
   imports: [
-    BrowserAnimationsModule,
-    CommonModule,
-    MatButtonModule,
-    MatCardModule,
-    MatFormFieldModule,
+    BrowserModule,
+    FlexLayoutModule,
+    AppRoutingModule,
     MatInputModule,
     MatToolbarModule,
     MatSidenavModule,
-    HttpClientModule,
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    MatCheckboxModule,
-    AppRoutingModule,
-    MatMenuModule,
-    FlexLayoutModule,
-    MatSelectModule,
+    MatListModule,
     MatIconModule,
-    MatDialogModule//, MatDialogRef, MAT_DIALOG_DATA
+    MatCardModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatGridListModule,
+    MatBadgeModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatTooltipModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-   entryComponents: [AddadminComponent, AdminComponent, BuyproductComponent],
-  providers: [ EthcontractService],
+  entryComponents: [UserComponent, AddStoreComponent,AddPrdouctComponent],
+  providers: [EthcontractService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,75 @@
+<div>
+    <div fxLayout="row" class="main-div">
+      <div fxFlex="40" fxLayoutGap="20px;" >
+          <div fxLayout="column">
+              <div class="product-store-title " >
+                <span class="ellipse myproduct-store-title" title="{{currentStore.storedetail[1]}}">{{currentStore.storedetail[1]}}</span>
+              <img src="../../assets/ic_edit.svg" class="icon-property store-action-icon"  (click)="editStore()"/></div>
+              <div  class="product-store-description product-description-width  ellipse" title="{{currentStore.storedetail[3]}}">{{currentStore.storedetail[3] }}</div>
+            </div>
+ 
+      </div>
+  
+  
+      
+      <div fxFlex="40" class="my-products-margin">
+          <button class="balance-button">
+              <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start stretch" fxFlexFill>
+                <div fxFlex="80">
+            <span class="balance-color">{{storeBalance}}</span><br/>
+            <span class="available-balance">Store Balance</span>
+          </div>
+          <div fxFlex="20">
+              <button mat-icon-button class="mat-icon-color">
+               <!-- <mat-icon >filter_list</mat-icon>-->
+               <span>Ξ</span>
+              </button>
+            </div>
+          </div>
+          </button>
+           
+      </div>
+
+      <div  fxFlex="20" class="create-user producuts-add-product">
+          <button mat-button class="add-person" (click)="addProduct()">
+            <span class="add-person-title" >Add a Product</span></button>
+          
+          </div>
+
+    </div>
+  
+    <div  class="my-prodcucts-height">
+      <mat-grid-list cols="3" >
+      <mat-grid-tile  *ngFor="let product of products; let index=index;" >
+        <mat-card class="product-mat-card">
+        <div fxLayout="column">
+          <div    class="product-before-buy my-prodcucts-div">  
+              <img src="../../assets/Remove.svg" class="icon-property store-action-icon action-icon"  (click)="removeProduct(index)"/>
+             <img src="../../assets/ic_edit.svg" class="icon-property store-action-icon action-icon"  (click)="editProduct(index)"/>
+            
+          </div>
+          <div style="height:140px;width:225px;">
+            <div class="my-products-margin">
+              <span class="product-name ellipse" title="{{product.productdetail[0]}}">{{product.productdetail[0]}}</span>
+             <div class="my-products-quantity">
+                <span class="icon-property" style="padding-right:4px;">Ξ</span>
+              <span >{{product.productdetail[2]}}</span>
+               </div>
+            </div>
+            <div class="my-products-margin">
+              <span class="produt-description ellipse" title="{{product.productdetail[1]}}" >{{product.productdetail[1]}}</span>
+            </div>
+            <div>
+                <span class="my-product-price">{{product.productdetail[3]}}</span>
+            </div>
+          </div>
+        </div>
+               
+           
+        </mat-card>
+      </mat-grid-tile>
+  
+      </mat-grid-list>
+    </div>
+  
+  </div>

@@ -1,0 +1,53 @@
+@import '../../variables.sccs';
+.loginbg{
+    background-image: url("/assets/loginimage.svg");
+    background-size: 100% ;
+    background-repeat: no-repeat;
+}
+.login-div{
+    margin-top: 200px;
+    margin-left: 70px;
+}
+
+.login-title{
+    font-family: $base-font-family;
+    font-size: 35px;
+    color: #43425D;
+    text-align: center;
+    font-weight: bold;
+}
+
+.account-number-title{
+    font-family: $base-font-family;
+    font-size: 18px;
+    color: #4D4F5C;
+    text-align: center;
+    margin-left:70px;
+}
+
+.account-number-div{
+    padding-top: 26px !important;
+}
+.account-number-input{
+    width: 55%;
+    padding-top: 50px;
+}
+
+.login-button{
+    background-color: #43425D;
+    margin-left: 100px;
+    width: 200px;
+    height: 50px;
+    margin-top: 25px;
+}
+
+.login-button-text{
+    font-family: $base-font-family;
+    font-size: 18px;
+    color: #FFF;
+    text-align: center;
+}
+
+.login-overflow{
+    overflow-y: scroll;
+}

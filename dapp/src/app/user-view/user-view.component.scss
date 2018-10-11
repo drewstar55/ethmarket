@@ -1,0 +1,60 @@
+@import '../../variables.sccs';
+
+
+
+
+
+mat-grid-tile {
+    background: #FFF;
+  }
+
+ 
+  .user-card{
+      width:100% !important;
+  }
+
+
+  .mat-grid-tile-margin{
+         margin-right: 20px;
+         margin-left: 20px;
+         max-width:500px;
+         margin-bottom: 20px;
+         max-height:80px;
+  }
+
+  .close-icon{
+      float: right;
+      margin-right: 20px;
+      cursor: pointer;
+  }
+  .div-avatar{
+      margin-left: 10px;
+      background-color: #F0F0F7 !important;
+      width:72px;
+      height: 72px;
+      margin-bottom:10px;
+  }
+  .avatar-icon{
+      height: 62px;
+      width: 62px;
+      color: #43425D;
+      float:left;
+      margin-left: 10px;
+  }
+  .user-name{
+      font-family: $base-font-family;
+      font-size: 18px;
+      color:#4D4F5C;
+      opacity: 100%;
+      margin-top: 4px;
+  }
+
+  .account-number{
+    margin-top: 4px !important;
+    font-family: $base-font-family;
+    font-size: 15px;
+    font-weight: normal;
+    color: #43425D;
+    opacity: 50%;
+    text-overflow: ellipsis !important; 
+  }

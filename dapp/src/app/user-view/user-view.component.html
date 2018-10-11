@@ -1,0 +1,29 @@
+<div  fxLayout="row">
+<div fxFlex="90" class="view-header">
+<span  class="text-color">{{title}}</span>
+<!--<input matInput [(ngModel)]="searchInput" *ngIf="!isAdminPage"/>-->
+</div>
+<div  fxFlex="10" class="create-user" >
+<button mat-button class="add-person" (click)="addUser()">
+    <img src="../../assets/icon_add_person.svg" class="icon-property"  />
+  <span class="add-person-title" >{{buttonText}}</span></button>
+
+</div>
+</div>
+<div class="mat-grid-div">
+    <mat-grid-list cols="2" rowHeight="120px" >
+      <mat-grid-tile *ngFor="let user of users; let index=index" class="mat-grid-tile-margin">
+       <mat-card class="user-card" >
+        
+           <img class="close-icon icon-property" src="../../assets/Remove.svg" (click)="removeItem(index)"/>
+          <!-- <img class="close-icon icon-property" src="../../assets/ic_edit.svg" *ngIf="!isAdminPage" (click)="editUser(index)"/>-->
+           <img [src]="user.imagePath? user.imagePath: '../../assets/icon_admin_pic.svg'" class="avatar-icon"/>
+          <mat-card-header >
+              <mat-card-title class="user-name" >John Doe</mat-card-title>
+              <mat-card-subtitle class="account-number">{{user}}</mat-card-subtitle>
+            </mat-card-header>
+       </mat-card>
+      </mat-grid-tile>
+      </mat-grid-list>
+
+    </div>

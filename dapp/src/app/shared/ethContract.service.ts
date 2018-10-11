@@ -26,7 +26,7 @@ export class EthcontractService {
     if (typeof window.web3 !== 'undefined') {
       this.web3Provider = window.web3.currentProvider;
     } else {
-      this.web3Provider = new Web3.providers.HttpProvider('http://127.0.0.1:8545');
+      this.web3Provider = new Web3.providers.HttpProvider('http://127.0.0.1:7545');
     }
 
     window.web3 = new Web3(this.web3Provider);
@@ -191,7 +191,7 @@ async buyProduct(store, currentProductId, quantity){
   console.log('Buying product');
   const currentStore = this.Store.at(store);
 let productDetails = await currentStore.getProductDetails(currentProductId);
-await currentStore.buyProductFromStore(currentProductId, quantity, {from:this.activeAccount});
+await currentStore.buyProductFromStore(currentProductId, quantity, {from: this.activeAccount, gas: 2200000, value: quantity * productDetails[2].toNumber()});
 let updatedProductDetails = await currentStore.getProductDetails(currentProductId);
 return updatedProductDetails;
 }

@@ -1,0 +1,53 @@
+<div  fxLayout="row">
+    <div fxFlex="90" class="view-header">
+    <span  class="text-color">{{title}}</span>
+    <!--<input matInput [(ngModel)]="searchInput" *ngIf="!isAdminPage"/>-->
+    </div>
+    <div  fxFlex="10" class="create-user" >
+    <button mat-button class="add-person" (click)="addStore()" *ngIf="!isStore">
+     <!--   <img src="../../assets/icon_add_person.svg" class="icon-property"  />-->
+      <span class="add-person-title" >Add a Store</span></button>
+    
+    </div>
+</div>
+    <div class="mat-grid-div">
+        <mat-grid-list cols="2" rowHeight="300px;" >
+        
+          <mat-grid-tile *ngFor="let store of stores; let index=index;" >
+              <div fxFlex fxLayout="row" class="store-grid">
+                <div fxFlex="50" style="background-color: #FFF">
+                    <mat-card  class="store-card">
+                        <mat-card-actions class="float-property">
+                          <img src="../../assets/ic_edit.svg" class="icon-property store-action-icon" (click)="editStore(index)"/>
+                          <img src="../../assets/Remove.svg" class="icon-property store-action-icon" (click)="removeStore(index)"/>
+                        </mat-card-actions>
+                        
+                            
+          
+                        <div class="store-name ellipse" title="{{store.storedetail[1]}}">{{store.storedetail[1]}}
+                        <!--   <img src="../../assets/ic_heart.svg" class="icon-property" style="float:right" *ngIf="isStore"/> -->
+                        </div>
+                       
+                        <mat-card-title>
+                        <mat-star-rating [rating]="store.rating? store.rating : 2"  [starCount]="5"  (ratingUpdated)="onRatingChanged($event)"></mat-star-rating></mat-card-title>
+                      
+                        <mat-card-content class="store-description ellipse" title="{{store.storedetail[3]}}">
+                           {{store.storedetail[3]}}
+                        </mat-card-content>
+                        <mat-card-footer>
+                          <button mat-raised-button class="store-button" (click)="viewStore(store,index)">
+                            <span class="store-button-title">Visit Store</span>
+                          </button>
+                        </mat-card-footer>
+                    </mat-card>
+                   </div>
+                <div fxFlex="50" style="background-color: #43425D">
+                  </div>
+              </div>
+            </mat-grid-tile>
+
+         
+          </mat-grid-list>
+    
+        </div>
+     

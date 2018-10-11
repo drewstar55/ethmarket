@@ -1,0 +1,73 @@
+<div>
+  <div fxLayout="row" class="product-top-div">
+    <div fxFlex="40" fxLayoutGap="20px;">
+
+      <div class="product-title-div" (click)="backToStore()">
+        <img  src="../../assets/icon_exit_store.svg" class="icon-property product-arrow"/>
+        <span class="product-exit"> Exit Store</span>
+      </div>
+
+
+
+    </div>
+    <div fxFlex="60" class="product-div-margin">
+      <div fxLayout="column">
+        <div class="product-store-title product-content-width ellipse" title="{{currentStore.storedetail[1]}}">{{currentStore.storedetail[1]}}</div>
+        <div class="product-store-description product-content-width ellipse" title="{{currentStore.storedetail[3]}}">{{currentStore.storedetail[3]}}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="my-prodcucts-height">
+
+    <mat-grid-list cols="3">
+      <mat-grid-tile *ngFor="let product of products; let index=index;">
+        <mat-card class="product-mat-card">
+          <div fxLayout="column">
+            <div class="product-before-buy" attr.id="product_{{index}}">
+                <div class="heart-icon">
+                    <img src="../../assets/ic_heart.svg"/>
+                   </div>
+              <div class="product-image-div" *ngIf="getEnableValue(index)">
+              
+                <div>
+                  <span class="product-quantity">Quantity</span>
+                </div>
+                <div class="product-div-margin">
+                  <span  class="product-increase value-button " (click)="decreaseQuantity(index)">-</span>
+                  <input type="number" class="quantity-number" [(ngModel)]="quantity" />
+                  <span  class="product-increase value-button" (click)="increaseQuantity(index)">+</span>
+                </div>
+              </div>
+              <div attr.id="pay_{{index}}" *ngIf="getPaymentValue(index)" class="circle-parent">
+                 <img src="../../assets/circle.svg" class="circle"/>
+                 <img src="../../assets/icon_tick.svg" class="tick-mark"/>
+              </div>
+            </div>
+            <div class="product-content-div">
+              <div class="product-margin">
+                <span class="product-name  ellipse" title="{{product.productdetail[0]}}">{{product.productdetail[0]}}</span>
+                
+                <div class="prodcut-price">
+                  <span class="icon-property currency-icon">Ξ</span> 
+                  <span> {{product.productdetail[2]}}</span>
+                  </div>
+              </div>
+              <div class="product-margin">
+                <span class="text-overflow produt-description ellipse" title=" {{product.productdetail[1]}}">{{product.productdetail[1]}}</span>
+              </div>
+              <div>
+                <span *ngIf="getPaymentValue(index)" class="transaction-text">{{transactionCompleted}}</span>
+                <button mat-raised-button class="buy-button buy-text" attr.id="button_{{index}}" (click)="buy(index)" *ngIf="!getPaymentValue(index)">{{buttonText}}</button>
+              </div>
+            </div>
+          </div>
+
+
+        </mat-card>
+      </mat-grid-tile>
+
+    </mat-grid-list>
+  </div>
+
+</div>

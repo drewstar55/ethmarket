@@ -1,0 +1,328 @@
+/* You can add global styles to this file, and also import other style files */
+@import './variables.sccs';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+body,
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.icon-property{
+    width:20px;
+    height:20px;
+}
+
+.view-header{
+    margin-top: 30px;
+    margin-bottom:30px;
+    margin-left:70px;
+}
+
+
+.text-color{
+    color:  #43425D;
+    font-size: 18px;
+    font-family: $base-font-family;
+    text-align: left;
+  }
+
+  .create-user{
+    margin-top: 25px;
+    margin-bottom:30px;
+    margin-right: 100px;
+}
+
+.add-person{
+    height:50px;
+    background-color:#43425D !important;
+    margin-right: 10px;
+}
+
+.add-person-title{
+    margin-left: 10px;
+    font-family: $base-font-family;
+    font-size:18px;
+    text-align: center;
+    color:#FFF;
+}
+.float-property{
+    float: right;
+}
+
+.mat-grid-div{
+    position:relative;
+  //  width: 100%;
+    height: calc(100%-100px);
+    //overflow-y: scroll;
+    //padding-right: 90px; /* Increase/decrease this value for cross-browser compatibility */
+    //margin-right: 90px;
+    margin-left: 20px;
+    box-sizing: content-box
+  }
+
+  .dialouge-title{
+    font-family: $base-font-family;
+    font-size:25px;
+    color: #4D4F5C;
+    text-align: center;
+   // float: right;
+}
+
+.close-icon{
+    float: right;
+    cursor: pointer;
+}
+
+.mat-field-property{
+   width: 60%;
+   margin-left: 120px;
+   margin-top: 20px;
+}
+
+.mat-field-button{
+    background-color:#3B86FF; 
+    margin-left:120px !important;
+    width:170px;
+}
+
+.mat-input-font{
+    font-family: $base-font-family !important;
+    font-size:13px !important;
+}
+
+.white-background-color{
+    background-color: #FFF !important;
+}
+
+.text-overflow{
+   ///word-break: break-all;
+   font-size:13px;
+   margin-left:10px; 
+   overflow-wrap:break-word;
+
+ width:150px;
+           
+}
+
+.product-store-title{
+    font-family: $base-font-family;
+    font-size: 28px;
+    font-weight: 300;
+    color: #43425D;
+    float:left;
+}
+
+.product-exit{
+
+font-family: $base-font-family;
+font-size: 12px;
+font-weight: bold;
+color: #4D4F5C;
+
+}
+
+.product-name{
+    font-family: $base-font-family;
+    font-size: 18px;
+    font-weight: bold;  
+    margin-left:10px;
+    color: #4D4F5C;
+    opacity: 1;
+    display: inline-block;
+    width: 125px;
+}
+
+.prodcut-price{
+    float: right;
+    font-size: 18px;
+    color: #FF6565;
+    font-weight: bold;
+}
+
+.produt-description{
+    font-family: $base-font-family;
+    font-size: 13px;
+    color: #4D4F5C;
+    opacity: 0.5;
+    display: inline-block;
+    margin-left: 10px;
+    width:200px;
+}
+
+.buy-button{
+    background-color: #3B86FF;
+    margin-right:20px;
+    float:right;
+    margin-top:15px;
+    width: 100px;
+}
+
+.product-quantity{
+    color: #fff;
+    font-family: $base-font-family;
+    opacity: 1;
+    font-size: 14px;
+}
+
+.value-button {
+    display: inline-block;
+   // border: 1px solid #ddd;
+    margin: 0px;
+    width: 40px;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 11px 0;
+    //background: #eee;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .value-button:hover {
+    cursor: pointer;
+  }
+  
+ 
+  
+  .quantity-number {
+    text-align: center;
+    border: none;
+    opacity: 1;
+    width: 40px;
+    height: 40px;
+    color: #fff !important;
+    background-color:#000000;
+  }
+  
+  .quantity-number::-webkit-inner-spin-button,
+  .quantity-number::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+  }
+
+ 
+  .product-before-buy{
+    background-color:#B2B1D0;
+    opacity:1;
+    height:200px;
+  }
+
+  .product-mat-card{
+    margin-bottom:100px;
+     margin-left:70px;
+     margin-top:100px; 
+     width:100%;
+     margin-right:30px;
+     padding:0px !important;
+  }
+
+  .buy-text{
+      font-family: $base-font-family;
+      font-size: 15px;
+      text-align: center;
+      color: #FFFFFF;
+  }
+
+  .product-store-description{
+     color:#4D4F5C;
+     font-size:13px;
+     opacity: 1;
+     font-size:13px;
+     color:#4D4F5C;
+     opacity:1; 
+     max-width:50%;
+  }
+
+  .store-action-icon{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+ 
+.balance-button{
+    height:46px;
+    background-color: #F0F0F7;
+    border-radius: 45px; 
+    border: 1px;
+    width:150px;
+ 
+}
+.balance-color{
+    color: #43425D;
+    font-family: $base-font-family;
+    font-size:18px;
+    font-weight: 500;
+    text-align: left;
+    margin: 6px;
+}
+
+.available-balance{
+   font-size:10px;
+   font-weight: 300;
+   text-align: left;
+   margin: 6px;
+}
+
+.mat-icon-color{
+    background-color: #FFF !important;
+}
+
+.main-div{
+    height:120px; 
+    width:100%; 
+    margin-left:50px;
+    margin-top:50px;
+    margin-bottom:20px;
+}
+
+.text-overflow-wrap{
+    overflow-wrap: break-word;
+}
+
+.my-prodcucts-height{
+    width:100%; 
+    height:calc(100% - 200px) ;
+}
+
+.ellipse{
+    //display:block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: break-word;
+    
+}
+
+.active{
+    background-color: #000000;
+    opacity: 0.4;
+   
+}
+
+.currency-icon{
+    margin-right: 4px;
+}
+
+.heart-icon{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    float: right;
+}
+
+.highlight-tab{
+    border-left: 4px solid #3B86FF;
+    height: 64px;
+}
+
+.mat-tool-bar-padding{
+    padding: 0px !important;
+}

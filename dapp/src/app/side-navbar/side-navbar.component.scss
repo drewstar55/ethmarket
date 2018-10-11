@@ -1,0 +1,44 @@
+@import '../../variables.sccs';
+
+.iconCls{
+    cursor: pointer;
+    margin:20px 20px 20px 20px;
+    position: relative;
+}
+.descriptionCls{
+    font-size: $medium-font-size;
+    color: #FFF;
+    text-align: left;
+    font-weight: normal;
+    cursor: pointer;  
+}
+
+.sideToolbarCls{
+    background: transparent;
+    font-family: $base-font-family;
+}
+
+
+.tool-bar-title{
+   font-family: $base-font-family;
+   font-size: $medium-font-size;
+   font-weight: bold;
+   color : #FFF;
+   margin:26px 32px 25px 20px;
+   position: absolute;
+}
+
+.tool-bar-height{
+ height: 70px;
+}
+
+.help-center{
+  bottom: 6px;
+  position: absolute;
+}
+
+.settings{
+    bottom: 70px;
+    position: absolute; 
+}
+

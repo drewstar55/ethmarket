@@ -1,13 +1,28 @@
-<div class="loginform-container">
-  	<h3 class="form-heading">Sign In</h3>
-    <div class="form-paragraph">Welcome to Online Market Place</div>
-    <div class="form-body">
-  <mat-form-field>
-    <input matInput placeholder="Account Number"  [(ngModel)]="activeAccount" >
-  </mat-form-field>
-  <div class="camp-signin">
-    <button class="form-primary-button" mat-raised-button (click)="signin()">Sign In</button>
-    <button (click)="reset()" mat-raised-button >Cancel</button>
+<!-- The content below is only a placeholder and can be replaced. -->
+
+<div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start stretch" fxFlexFill class="login-overflow">
+
+  <div fxFlex="50" >  
+<img src="../../assets/loginimage.svg"/>
+  </div>
+  <div fxFlex="50">
+    <div class="login-div">
+    <div><span class="login-title">ONLINE MARKET PLACE</span><br/></div>
+    <div class="account-number-div"> <span class="account-number-title">Enter your account number to Login</span>
+    <form [formGroup]="loginFormGroup" (ngSubmit)="login(loginFormGroup.value)" >
+      <mat-form-field class="account-number-input">
+        <input matInput placeholder="Account Number" formControlName="accountNumber">
+      </mat-form-field>
+     <div>
+        <button mat-raised-button class="login-button" >
+          <span class="login-button-text">Login</span></button>
+     </div>
+          
+     
+    </form>
+  </div>
+  </div>
   </div>
 </div>
-</div>
+
+
